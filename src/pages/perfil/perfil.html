@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <button ion-button id="image" clear (click)="changeImg()">
+        <img id="profilepic padding-bottom" src="{{imgP}}"/>
+      </button>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 id="nameC">
+        <div padding>
+          <p>&nbsp;{{NombreC}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 push-0>
+        <div padding>
+          <button ion-button color="primary" block (click)="editar()">Editar</button>
+          <br>
+          <button ion-button color="primary" block (click)="cambio()">cambiar Contraseña</button>
+          <br>
+          <button ion-button color="primary" block (click)="cerrar()">cerrar Sesión</button>
+        </div>
+      </ion-col>
+    </ion-row>       
+  </ion-grid>    
+</ion-content>

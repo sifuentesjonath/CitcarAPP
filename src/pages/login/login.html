@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--Contenido-->
+<ion-content padding>
+    <ion-grid>
+      <ion-row>
+            <ion-col col-6 push-3><div><img src="assets/imgs/logo.png"/></div></ion-col>
+      </ion-row>      
+    </ion-grid>
+    <form [formGroup]="datos" (ngSubmit)="ingresar()" novalidate>  
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" formControlName="correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-col col-3 push-3>
+          <div><button ion-button color="grey" clear (click)="passwordR()"><p>¿Olvidaste tu usuario o contraseña?</p></button></div>
+        </ion-col>
+      </ion-list>
+      <div padding>
+        <button ion-button color="primary"  [disabled]="datos.invalid" block>Ingresar</button>
+      </div>
+    </form>  
+  <div padding>
+    <button ion-button color="grey" block  (click)="registrarse()">Registrarse</button>
+  </div>
+</ion-content>

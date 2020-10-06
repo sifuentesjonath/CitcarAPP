@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>  
+    <ion-title>Métodos de Pago</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list> 
+    <div ion-item full outline clear *ngFor="let metodo of metodos">
+      <ion-grid>
+        <ion-row justify-content-between>
+          <ion-col col-6>
+            <div><ion-icon ios="ios-cash" md="ios-cash-outline" color="green" id="iconC"></ion-icon>{{metodo.mtoD}}</div>
+          </ion-col> 
+        </ion-row>
+        <ion-row justify-content-between>
+          <ion-col col-6>
+            <div>{{metodo.mtoE}}</div>
+          </ion-col>
+        </ion-row>
+        <ion-row justify-content-between>
+          <ion-col col-12>
+            <button ion-button full outline clear><h6>Agregar metodo de pago</h6></button>
+          </ion-col>
+        </ion-row>   
+      </ion-grid>    
+    </div>
+  </ion-list>
+</ion-content>

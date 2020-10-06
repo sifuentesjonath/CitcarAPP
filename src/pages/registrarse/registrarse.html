@@ -1,0 +1,58 @@
+
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6 push-3><div><img src="assets/imgs/logo.png"/></div></ion-col>
+      </ion-row>      
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="datos" (ngSubmit)=" Registrar()" novalidate>  
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>Nombre</ion-label>
+              <ion-input type="text" formControlName="nombre"></ion-input>        
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>Apellido</ion-label>
+              <ion-input type="text" formControlName="apellido" ></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" formControlName="correo"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Confirmar Contraseña</ion-label>
+        <ion-input type="password" formControlName="passwordC"></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label floating>Celular</ion-label>
+                <ion-input type="tel" formControlName="celular"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-grid>      
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" [disabled]="datos.invalid" block>Crear una Cuenta</button>
+    </div>
+  </form>    
+</ion-content>

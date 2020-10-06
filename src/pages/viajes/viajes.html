@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>  
+    <ion-title>Viajes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list> 
+      <button ion-item full outline clear *ngFor="let viaje of viajes">
+        <ion-grid>
+          <ion-row justify-content-between>
+          <ion-col col-6>
+            <div>{{viaje.fecha}}</div>
+          </ion-col>
+          <ion-col col-4>
+            <div>${{viaje.costo}}</div>
+          </ion-col> 
+          </ion-row>
+          <ion-row justify-content-between>
+            <ion-col col-6>
+              <div>{{viaje.modelo}}</div>
+            </ion-col>
+            <ion-col col-4>
+              <div>{{viaje.metodoP}}</div>
+            </ion-col> 
+          </ion-row>  
+        </ion-grid>    
+      </button>
+  </ion-list>
+</ion-content>

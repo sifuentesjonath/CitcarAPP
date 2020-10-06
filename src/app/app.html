@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Relatibyte</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+        <button menuClose ion-item  (click)="openPage(x=0)"><ion-icon ios="ios-home" md="md-home"></ion-icon> Inicio</button>
+        <button menuClose ion-item  (click)="openPage(x=1)"><ion-icon name="contacts"></ion-icon> Perfil</button>
+        <button menuClose ion-item  (click)="openPage(x=2)"><ion-icon name="construct"></ion-icon> Configuración</button>
+        <button menuClose ion-item  (click)="openPage(x=3)"><ion-icon ios="ios-plane" md="md-plane"></ion-icon> Viajes</button>
+        <button menuClose ion-item  (click)="openPage(x=4)"><ion-icon ios="ios-pricetags" md="md-pricetags"></ion-icon> Métodos de Pago</button>
+        <button menuClose ion-item  (click)="openPage(x=5)"><ion-icon ios="ios-paper" md="md-paper"></ion-icon> Información legal</button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

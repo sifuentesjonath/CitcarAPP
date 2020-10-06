@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>     
+  <form [formGroup]="datos" (ngSubmit)="Editar()" novalidate>  
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Contraseña Actual</ion-label>
+        <ion-input type="password" formControlName="passwordOld"></ion-input>
+      </ion-item>      
+      <ion-item>
+        <ion-label floating>Nueva Contraseña</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Confirmar Contraseña</ion-label>
+        <ion-input type="password" formControlName="passwordC"></ion-input>
+      </ion-item>  
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" [disabled]="datos.invalid" block>Guardar</button>
+    </div>
+  </form>      
+</ion-content>

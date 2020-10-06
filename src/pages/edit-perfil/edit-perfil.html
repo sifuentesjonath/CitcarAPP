@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editar</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>     
+  <form [formGroup]="datos" (ngSubmit)="Editar()" novalidate>  
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>Nombre</ion-label>
+              <ion-input type="text" formControlName="nombre" value="{{nombre}}"></ion-input>        
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <ion-label floating>Apellido</ion-label>
+              <ion-input type="text" formControlName="apellido" value="{{apellido}}"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-label floating>Correo</ion-label>
+        <ion-input type="email" formControlName="correo" value="{{correo}}"></ion-input>
+      </ion-item>      
+      <ion-grid>
+        <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label floating>Celular</ion-label>
+                <ion-input type="tel" formControlName="celular" value="{{celular}}"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+      </ion-grid>      
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" [disabled]="datos.invalid" block>Editar</button>
+    </div>
+  </form>      
+</ion-content>
+

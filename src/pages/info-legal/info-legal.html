@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="dark" hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>  
+    <ion-title>información Legal</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content  padding>
+  <ion-list no-lines>
+    <button ion-item id="btnItem" *ngFor="let item of items" (click)="itemSelected(item)">
+      <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>&nbsp;&nbsp;&nbsp;{{item}}
+    </button>
+    <button ion-item id="btnItem"  (click)="infoApp(item)">
+        <ion-icon ios="ios-phone-portrait" md="md-phone-portrait"></ion-icon>&nbsp;&nbsp;&nbsp;Información de la Aplicación
+    </button>    
+  </ion-list>
+</ion-content>
